@@ -1,4 +1,9 @@
-
-.img{
-  width: 50%;
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #300202;
+  border-radius: 8px;
 }

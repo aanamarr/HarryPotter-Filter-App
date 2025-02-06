@@ -1,10 +1,12 @@
 //logo harrypotter
-import React from 'react'
+import React from 'react';
+import '../styles/Header.css';
+import logo from '../images/h-p2.jpg';
 
 function Header() {
   return (
       <header className='title'>
-        <img src="./title.png" alt="Harry Potter" className='title__img'/>
+        <img src={logo} alt="Harry Potter" className='title__img'/>
       </header>
     
   )

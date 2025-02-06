@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import CharacterList from "./CharacterList";
-import CharacterCard from "./CharacterCard";
 import NameFilter from './NameFilter';
 import HouseFilter from './HouseFilter';
 import CharacterDetail from './CharacterDetail';
 import Header from "./Header";
+import '../styles/App.css';
 
 
 function App() {
@@ -34,20 +34,23 @@ function App() {
   }, [nameFilter, characters]);
 
   return (
-    <>
+    <div className="app">
     <Header/>
     <Routes>
+      {/* Home, filtros y lista de personajes */}
       <Route path="/" element={
           <>
             <NameFilter setNameFilter={setNameFilter} />
             <HouseFilter setHouseFilter={setHouseFilter} />
-            <CharacterList characters={filterCharacters} />
+            <CharacterList characters={filterCharacters} nameFilter={nameFilter} />
+
           </>
         }
       />
+      {/* Detalles de los personajes */}
       <Route path="/character/:id" element={<CharacterDetail />} />
     </Routes>
-    </>
+    </div>
   );
 }
 

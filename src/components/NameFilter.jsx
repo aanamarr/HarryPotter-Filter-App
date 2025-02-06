@@ -1,14 +1,22 @@
 //Componente para el filtro por nombre.
-import React from 'react';
+import PropTypes from 'prop-types';
 
 const NameFilter = ({ setNameFilter }) => {
+  const handleClick = (event) => event.preventDefault();
+
   return (
-    <input 
-      type="text" 
-      placeholder="Search by name" 
-      onChange={(e) => setNameFilter(e.target.value)} 
-    />
+    <form onSubmit={handleClick}>
+      <input 
+        type="text" 
+        placeholder="Buscar personaje ⚡🤓🪄🦌" 
+        onChange={(ev) => setNameFilter(ev.target.value)} 
+      />
+    </form>
   );
+};
+
+NameFilter.propTypes = {
+  setNameFilter: PropTypes.func.isRequired,
 };
 
 export default NameFilter;

@@ -7,7 +7,7 @@ const CharacterCard = ({ character }) => {
   return (
     <Link to={`/character/${character.id}`}>
         <div className="character-card">
-            <img src={character.name || 'https://dummyimage.com/210x295/000/ff00d0.png&text=no+img'} alt={character.name} />
+            <img src={character.image || 'https://dummyimage.com/210x295/000/ff00d0.png&text=no+img'} alt={character.name} />
             <h3>{character.name}</h3>
             <p>{character.species}</p>
         </div>

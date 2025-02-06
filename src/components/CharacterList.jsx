@@ -3,9 +3,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CharacterCard from './CharacterCard';
 import '../styles/CharacterList.css';
+import nameFilter from './NameFilter';
 
 
-function CharacterList({characters}) {
+function CharacterList({characters, nameFilter}) {
+    if (characters.length === 0) {
+        return <p className="character-list">No hay ningún personaje que coincida con "{nameFilter}" 🏰👨‍🏫🪄⚗️🐍.</p>;
+    }
+
     return(
         <div className="character-list">
             {characters.map(character => (
@@ -17,7 +22,7 @@ function CharacterList({characters}) {
 
 CharacterList.propTypes = {
     characters: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number.isRequired,
+        id: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
     })).isRequired,
 };
