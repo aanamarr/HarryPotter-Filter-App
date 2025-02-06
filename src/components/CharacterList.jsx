@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import CharacterCard from './CharacterCard';
 import '../styles/CharacterList.css';
 
+
 function CharacterList({characters}) {
     return(
         <div className="character-list">
