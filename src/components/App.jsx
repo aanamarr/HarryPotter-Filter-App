@@ -4,6 +4,7 @@ import CharacterList from "./CharacterList";
 import NameFilter from './NameFilter';
 import HouseFilter from './HouseFilter';
 import CharacterDetail from './CharacterDetail';
+import '../styles/SelectFilter.css';
 import Header from "./Header";
 import '../styles/App.css';
 
