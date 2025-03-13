@@ -1,24 +1,52 @@
+
 .input {
     width: 100%;
     max-width: 400px;
     margin: 20px auto;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    font-size: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.input:focus {
-    border-color: #007bff;
+    appearance: none;
+    background: linear-gradient(135deg, #6d1b00, #2e0000); /* Fondo con tonos de Gryffindor */
+    color: #ffd700;
+    font-size: 20px;
+    font-family: 'Harry Potter', sans-serif; /* Usa una fuente mágica */
+    padding: 10px 50px 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #ffd700;
+    cursor: pointer;
     outline: none;
-    box-shadow: 0 0 5px rgba(145, 255, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+.input:hover {
+    background: linear-gradient(135deg, #822000, #3a0000);
+    border-color: #fff000;
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.8);
 }
 
+
+/*Css para el selector de HouseFilter.jsx*/
 .selects {
-    color: black;
-    font-size: 16px;
-    padding: 8px;
-    border-radius: 15px;
+    appearance: none;
+    background: linear-gradient(135deg, #6d1b00, #2e0000); /* Fondo con tonos de Gryffindor */
+    color: #ffd700;
+    font-size: 20px;
+    font-family: 'Harry Potter', sans-serif; /* Usa una fuente mágica */
+    padding: 10px 50px 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #ffd700;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.selects:hover {
+    background: linear-gradient(135deg, #822000, #3a0000);
+    border-color: #fff000;
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.8);
+}
+
+.selects:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 1);
 }

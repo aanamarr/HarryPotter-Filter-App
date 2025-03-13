@@ -19,3 +19,19 @@ html, body {
     background-color: black; /* Mantener el fondo negro */
     overflow-x: hidden; /* Evitar desplazamiento horizontal */
 }
+.filters-container {
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 10px; /* Espacio entre el input y el select */
+    margin-top: 20px; /* Separación del encabezado */
+}
+
+/* Opcional: Asegurar que input y select sean responsivos */
+.input, .selects {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+

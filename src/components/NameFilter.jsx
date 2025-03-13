@@ -6,13 +6,6 @@ const NameFilter = ({ setNameFilter }) => {
 
   return (
     <form onSubmit={handleClick}>
-      <input
-        className='input'
-        type="text" 
-        placeholder="Buscar personaje ⚡🤓🪄🦌" 
-        onChange={(ev) => setNameFilter(ev.target.value)}
-       
-      />
     </form>
   );
 };
