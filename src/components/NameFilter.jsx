@@ -1,5 +1,5 @@
 //Componente para el filtro por nombre.
-import PropTypes from 'prop-types';
+/*import PropTypes from 'prop-types';
 
 const NameFilter = ({ setNameFilter }) => {
   const handleClick = (event) => event.preventDefault();
@@ -14,4 +14,4 @@ NameFilter.propTypes = {
   setNameFilter: PropTypes.func.isRequired,
 };
 
-export default NameFilter;
+export default NameFilter;*/

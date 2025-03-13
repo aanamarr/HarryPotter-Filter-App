@@ -2,11 +2,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const HouseFilter = ({ setHouseFilter }) => {
+const HouseFilter = ({ setHouseFilter, setNameFilter }) => {
   return (
   <div className="filters-container">
-    <input type="text" placeholder="Buscar personaje ⚡🤓🪄" className="input" onChange={(ev) => setNameFilter(ev.target.value)}/>
-    <select className="selects">
+    {/* Input para buscar por nombre */}
+    <input 
+    type="text" 
+    placeholder="Buscar personaje ⚡🤓🪄" 
+    className="input" 
+    onChange={(ev) => setNameFilter(ev.target.value)}
+    />
+
+    {/* Select para filtrar por casa */}
+    <select 
+    className="selects"
+    onChange={(ev) => setHouseFilter(ev.target.value)}
+    >
+      <option value="all">Todas las casas</option>
       <option value="gryffindor">Gryffindor</option>
       <option value="slytherin">Slytherin</option>
       <option value="ravenclaw">Ravenclaw</option>
@@ -15,8 +27,10 @@ const HouseFilter = ({ setHouseFilter }) => {
   </div>
   );
 };
+
 HouseFilter.propTypes = {
   setHouseFilter: PropTypes.func.isRequired,
+  setNameFilter: Proptypes.func.isRequired
 };
 
 export default HouseFilter;

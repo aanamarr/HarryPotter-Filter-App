@@ -41,13 +41,12 @@ function App() {
       {/* Home, filtros y lista de personajes */}
       <Route path="/" element={
           <>
-            <NameFilter setNameFilter={setNameFilter} />
-            <HouseFilter setHouseFilter={setHouseFilter} />
+            <HouseFilter setHouseFilter={setHouseFilter} setNameFilter={setNameFilter}/>
             <CharacterList characters={filterCharacters} nameFilter={nameFilter} />
-
           </>
         }
       />
+      
       {/* Detalles de los personajes */}
       <Route path="/character/:id" element={<CharacterDetail />} />
     </Routes>

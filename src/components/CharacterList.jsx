@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CharacterCard from './CharacterCard';
 import '../styles/CharacterList.css';
-import nameFilter from './NameFilter';
+import NameFilter from './HouseFilter';
 
 
 function CharacterList({characters, nameFilter}) {
