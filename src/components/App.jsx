@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import CharacterList from "./CharacterList";
-import NameFilter from './NameFilter';
 import HouseFilter from './HouseFilter';
 import CharacterDetail from './CharacterDetail';
 import '../styles/SelectFilter.css';
@@ -11,16 +10,19 @@ import '../styles/App.css';
 
 function App() {
   const [characters, setCharacters] = useState([]);
-  const [search, setSearch] = useState("");
-  const [filterCharacters, setFilterCharacters] = useState([]);
-  const [houseFilter, setHouseFilter] = useState("gryffindor");
+  const [houseFilter, setHouseFilter] = useState("all");
   const [nameFilter, setNameFilter] = useState("");
+  const [filterCharacters, setFilterCharacters] = useState([]);
 
   //ahora usamos el useEffect para traer los datos de la API
 
   //filtrar por casa
   useEffect(() => {
-    fetch(`https://hp-api.onrender.com/api/characters/house/${houseFilter}`)
+    const url = houseFilter === "all" 
+    ? "https://hp-api.onrender.com/api/characters" //todos los personajes
+    : `https://hp-api.onrender.com/api/characters/house/${houseFilter}`; //filtrar por casa
+
+    fetch(url)
     .then(resp => resp.json())
     .then(data => setCharacters(data));
   }, [houseFilter]);
@@ -44,9 +46,8 @@ function App() {
             <HouseFilter setHouseFilter={setHouseFilter} setNameFilter={setNameFilter}/>
             <CharacterList characters={filterCharacters} nameFilter={nameFilter} />
           </>
-        }
-      />
-      
+        }/>
+
       {/* Detalles de los personajes */}
       <Route path="/character/:id" element={<CharacterDetail />} />
     </Routes>

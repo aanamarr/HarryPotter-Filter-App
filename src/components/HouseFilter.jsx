@@ -8,7 +8,7 @@ const HouseFilter = ({ setHouseFilter, setNameFilter }) => {
     {/* Input para buscar por nombre */}
     <input 
     type="text" 
-    placeholder="Buscar personaje ⚡🤓🪄" 
+    placeholder="Escribe un nombre... ¡Alohomora!" 
     className="input" 
     onChange={(ev) => setNameFilter(ev.target.value)}
     />
@@ -18,11 +18,11 @@ const HouseFilter = ({ setHouseFilter, setNameFilter }) => {
     className="selects"
     onChange={(ev) => setHouseFilter(ev.target.value)}
     >
-      <option value="all">Todas las casas</option>
-      <option value="gryffindor">Gryffindor</option>
-      <option value="slytherin">Slytherin</option>
-      <option value="ravenclaw">Ravenclaw</option>
-      <option value="hufflepuff">Hufflepuff</option>
+      <option value="all">🧙‍♂️ ¿De qué casa eres?</option>
+      <option value="gryffindor">🦁 Valiente como un león (Gryffindor)</option>
+      <option value="slytherin">🐍 Astuto como una serpiente (Slytherin)</option>
+      <option value="ravenclaw">🦅 Inteligente como un águila (Ravenclaw)</option>
+      <option value="hufflepuff">🦡 Leal como un tejón (Hufflepuff)</option>
     </select>
   </div>
   );
@@ -30,7 +30,7 @@ const HouseFilter = ({ setHouseFilter, setNameFilter }) => {
 
 HouseFilter.propTypes = {
   setHouseFilter: PropTypes.func.isRequired,
-  setNameFilter: Proptypes.func.isRequired
+  setNameFilter: PropTypes.func.isRequired
 };
 
 export default HouseFilter;

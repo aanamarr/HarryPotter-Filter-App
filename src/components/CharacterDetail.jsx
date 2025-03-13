@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import '../styles/CharacterDetail.css';
-
+import harryImage from '../images/noi-mag.png';
 
 const CharacterDetail = () => {
   const { id } = useParams();//siempre que se use useParams se debe importar de react-router-dom, useParams sirve para obtener los parámetros de la URL, es igual al id que se le pasa en el path de la ruta
@@ -24,7 +24,7 @@ const CharacterDetail = () => {
       <NavLink to="/" className="home-button">⬅ Volver</NavLink>
       <div className="character-detail">
         <img 
-          src={character.image || 'https://dummyimage.com/210x295/000/fff&text=No-image-Harry-Potter'} 
+          src={character.image || harryImage} 
           alt={character.name} 
         />
         <div className="info">

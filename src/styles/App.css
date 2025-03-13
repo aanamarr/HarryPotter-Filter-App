@@ -1,3 +1,10 @@
+* {
+    cursor: url(https://cur.cursors-4u.net/others/oth-3/oth246.cur), auto !important;
+}
+a {
+    text-decoration: none;
+}
+
 .app{
     min-height: 100vh;
     width: 100%;
@@ -24,7 +31,7 @@ html, body {
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
     gap: 10px; /* Espacio entre el input y el select */
-    margin-top: 20px; /* Separación del encabezado */
+    margin-top: 90px; /* Separación del encabezado */
 }
 
 /* Opcional: Asegurar que input y select sean responsivos */
@@ -33,5 +40,32 @@ html, body {
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
+}
+
+/*glitter del cursor*/
+.star {
+    position: absolute;
+    width: 20px; /* Tamaño ajustable */
+    height: auto;
+    pointer-events: none; /* Evita que interfiera con clics */
+    opacity: 1;
+    animation: starEffect 0.5s ease-out forwards;
+    filter: drop-shadow(0 0 5px rgba(255, 221, 0, 0.877)) 
+            drop-shadow(0 0 10px rgba(255, 200, 0, 0.874));
+}
+
+@keyframes starEffect {
+    0% {
+        transform: scale(0.5) translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3) translateY(-10px) rotate(15deg);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(0.8) translateY(-20px) rotate(-15deg);
+        opacity: 0;
+    }
 }
 

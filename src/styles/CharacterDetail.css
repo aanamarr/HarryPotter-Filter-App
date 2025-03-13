@@ -1,37 +1,73 @@
-.character-detail{
-  display: grid;
-  grid-template-columns: auto 1fr;
+.character-detail {
+  background-color: #d4af37; /* Color dorado */
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.8); /* Efecto de brillo */
+  display: flex;
   gap: 20px;
   align-items: center;
-  background-color: #d4af37;
-  padding: 20px;
-  border-radius: 8px;
-  width: fit-content; /* El ancho se ajusta al contenido */
-  margin: 20px auto;
+  font-family: 'Cinzel', serif; /* Letra elegante estilo Harry Potter */
+  animation: fadeIn 0.8s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }
 .character-detail img {
-  width: 210px;
-  height: 290px;
-  border-radius: 8px;
-}
-.character-detail .info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Espaciado entre las líneas de texto */
-  font-size: 16px;
-  color: #000;
-}
-.home-button {
-  display: inline-block;
-  background-color: #530505;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 16px;
-  margin-bottom: 15px;
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease-in-out;
 }
 
+.character-detail img:hover {
+  transform: scale(1.05); /* Hace zoom al pasar el mouse */
+  box-shadow: 0px 0px 25px rgba(255, 223, 0, 0.9); /* Brillo dorado */
+}
+
+.character-detail h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #450101; /* Color oscuro tipo pergamino */
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.character-detail p {
+  font-size: 18px;
+  color: #331a00; /* Marrón oscuro */
+  margin-bottom: 5px;
+}
+
+.character-detail p span {
+  font-weight: bold;
+  color: #000;
+}
+
+
+/*.character-detail .info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+  color: #000;
+}*/
+
+.home-button {
+  background-color: #5a0202; /* Rojo oscuro Gryffindor */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
 .home-button:hover {
-  background-color: #000000;
+  background-color: #a00202;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.7);
 }

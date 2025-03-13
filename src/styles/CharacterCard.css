@@ -1,6 +1,6 @@
 
 .character-card {
-    background-color: #d4af37;
+    /*background-color: #d4af37;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,13 +10,38 @@
     width: 100%;
 }
 .character-card p {
-    font-size: 1rem;
-    color: #000;
+    font-size: 16px;
+    font-style: italic;
+    color: #f0d9b5; /* Color crema */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin: 10px 0 15px 0;
 }
-.character-card img{
-    width: 95%;
-    margin: 4px 20px 0px 20px;
-    max-height: 300px;
-    height: auto;
-    
+.character-card h3 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ddc004;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.944);
+}
+
+.character-card h3:hover {
+    margin-top: 2.5px;
+    color: #f88705; /* Naranja fuego */
+    text-shadow: 1px 1px 8px rgba(255, 252, 190, 0.677);
+    transform: scale(1.2); /* Hace que crezca un poco */
+    transition: all 0.2s ease-in-out;
+}
+
+.character-card img {
+    width: 98%;
+    height: 300px; /* Ajusta según el tamaño deseado */
+    margin-bottom: 26px;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out; /* Suaviza la animación */
+}
+
+.character-card img:hover {
+    filter: brightness(1.3); /* Aumenta el brillo */
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 100, 0.8); /* Brillo dorado */
+    transform: scale(1.05); /* Hace que crezca un poco */
 }
